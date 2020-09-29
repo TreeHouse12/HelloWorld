@@ -2,8 +2,8 @@ services:
   - docker
 
 install:
-  -docker build -t simple-nginx .
-  -docker run -d -p 80:80 simple-nginx
+  - docker build -t simple-nginx .
+  - docker run -d -p 80:80 simple-nginx
 
 script:
   - docker ps
