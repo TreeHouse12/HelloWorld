@@ -1,0 +1,10 @@
+services:
+  - docker
+
+install:
+  -docker build -t simple-nginx .
+  -docker run -d -p 80:80 simple-nginx
+
+script:
+  - docker ps
+  - curl "http://localhost:80" | grep "Hello World"
